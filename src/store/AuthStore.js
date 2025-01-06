@@ -101,6 +101,8 @@ const createAuthStore = (set) => ({
         },
       };
 
+      console.log(response.data);
+
       const { status, message, data } = response.data;
 
       if (status === 200) {

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types"; 
 import Loader from "../components/Loader";
-import useBaoundStore from "../store/Store";
+import useBoundStore from "../store/Store";
 import { getAccessToken, getTokenExpiration, setSession } from "./token.service";
 
 const AuthGuard = ({ children }) => {
-  const { loginWithToken, logoutService } = useBaoundStore((state) => state);
+  const { loginWithToken, logoutService } = useBoundStore((state) => state);
 
   const [tokenLoading, setTokenLoading] = useState(true);
 

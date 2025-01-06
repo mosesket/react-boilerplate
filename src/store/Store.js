@@ -3,11 +3,11 @@ import AuthStore from "./AuthStore";
 import ProductStore from "./ProductStore";
 import { create } from "zustand";
 
-const useBaoundStore = create()(
+const useBoundStore = create()(
   devtools((...a) => ({
     ...ProductStore(...a),
     ...AuthStore(...a),
   }))
 );
 
-export default useBaoundStore;
+export default useBoundStore;

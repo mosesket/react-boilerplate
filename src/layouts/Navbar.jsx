@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import useBaoundStore from "../store/Store";
+import useBoundStore from "../store/Store";
 
 const Navbar = () => {
-  const { logoutService, user } = useBaoundStore((state) => state);
+  const { logoutService, user } = useBoundStore((state) => state);
 
   const onLogout = () => {
     logoutService();
@@ -39,6 +39,19 @@ const Navbar = () => {
               }}
             >
               Home
+            </h4>
+          )}
+        </NavLink>
+
+        <NavLink to="/new">
+          {({ isActive }) => (
+            <h4
+              style={{
+                textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "green" : "blue",
+              }}
+            >
+              New
             </h4>
           )}
         </NavLink>

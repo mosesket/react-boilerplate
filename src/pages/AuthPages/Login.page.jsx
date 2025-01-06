@@ -4,7 +4,7 @@ import useBoundStore from "../../store/Store";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { loginService, authLoading, user } = useBoundStore((state) => state);
+  const { loginService, authLoading, user, rice, addRice } = useBoundStore((state) => state);
 
   useEffect(() => {
     if (user) {
@@ -22,7 +22,7 @@ const LoginPage = () => {
 
     loginService(email, password);
   };
-  
+
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <form onSubmit={onLogin}>
@@ -37,7 +37,7 @@ const LoginPage = () => {
           }}
         >
           <h1>This is the login page</h1>
-          
+
           <input
             placeholder="email"
             name="email"
