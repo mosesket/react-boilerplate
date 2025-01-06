@@ -1,6 +1,6 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect } from "react";
-import Domain from "../../services/Endpoint";
+// import Domain from "../../services/Endpoint";
 
 const ProductPage = () => {
   const call = async () => {
